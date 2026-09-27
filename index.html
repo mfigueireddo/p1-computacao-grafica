@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mini-sistema solar</title>
+  <style>
+    html, body {
+      margin: 0;
+      height: 100%;
+      background: #05060a;
+      color: #cbd5e1;
+      font-family: system-ui, sans-serif;
+      overflow: hidden;
+    }
+    #wrap {
+      position: fixed;
+      inset: 0;
+      display: grid;
+      place-items: center;
+    }
+    canvas {
+      width: 100vmin;
+      height: 100vmin;
+      display: block;
+      touch-action: none;
+    }
+    #err {
+      position: fixed;
+      inset: 0;
+      display: none;
+      place-items: center;
+      text-align: center;
+      padding: 24px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <canvas id="gpu-canvas" width="900" height="900"></canvas>
+  </div>
+  <div id="err"></div>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
